@@ -28,16 +28,27 @@ namespace Clickatell_Service
 
         private void btn_sendsms_Click(object sender, EventArgs e)
         {
+            //assigning text boxes to private variables
             api = txt_api.Text;
             to = txt_to.Text;
             from = txt_from.Text;
             delivery = txt_delivery.Text;
             message = txt_message.Text;
             
+            //creating a dictionary to store all the parameters that needs to be sent
+            Dictionary<string, string> Params = new Dictionary<string, string>();
+
+            //adding the parameters to the dictionary
+            Params.Add("content", message);
+            Params.Add("to", to);
+            if (from != "") { Params.Add("from", from); }
+            if (delivery != "") { Params.Add("scheduledDeliveryTime", delivery); }
+
             if (api != "")
             {
-                response = Api.SendSMS(api, "{\"content\":\"" + message + "\"" +
-                                            ",\"to\":[\"" + to + "\"]}");
+                //response = Api.SendSMS(api, "{\"content\":\"" + message + "\"" +
+                //",\"to\":[\"" + to + "\"]}");
+                response = Api.SendSMS(api, Params);
                 MessageBox.Show(response);
             }
             else
