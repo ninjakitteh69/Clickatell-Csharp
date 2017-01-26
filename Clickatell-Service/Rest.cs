@@ -10,6 +10,7 @@ namespace Clickatell_Service
 {
     class Rest
     {
+        //This takes the API Key and JSON array of data and posts it to the Message URL to send the SMS's
         public static string Post(string Token, string json)
         {
             var httpWebRequest = (HttpWebRequest)WebRequest.Create("https://platform.clickatell.com/messages");
