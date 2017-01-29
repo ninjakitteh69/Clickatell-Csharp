@@ -14,9 +14,9 @@ namespace Clickatell_Service
         public static string SendSMS(string Token, Dictionary<string, string> Params)
         {
             Params["to"] = CreateRecipientList(Params["to"]);
-            string JsonArray = JsonConvert.SerializeObject(Params, Formatting.Indented);
-            //return Rest.Post(Token, JsonArray);
-            return JsonArray;
+            string JsonArray = JsonConvert.SerializeObject(Params, Formatting.None);
+            JsonArray = JsonArray.Replace("\\\"", "\"").Replace("\"[", "[").Replace("]\"", "]");
+            return Rest.Post(Token, JsonArray);
         }
 
         //This function converts the recipients list into an array string so it can be parsed correctly by the json array.

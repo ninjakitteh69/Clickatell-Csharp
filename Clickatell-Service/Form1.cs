@@ -12,8 +12,6 @@ namespace Clickatell_Service
 {
     public partial class Form : System.Windows.Forms.Form
     {
-        private string username;
-        private string password;
         private string api;
         private string to;
         private string from;
@@ -46,8 +44,6 @@ namespace Clickatell_Service
 
             if (api != "")
             {
-                //response = Api.SendSMS(api, "{\"content\":\"" + message + "\"" +
-                //",\"to\":[\"" + to + "\"]}");
                 response = Api.SendSMS(api, Params);
                 MessageBox.Show(response);
             }
