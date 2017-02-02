@@ -9,6 +9,10 @@ Newtonsoft.JSON 9.0.1
 add Rest.cs and API.cs into your project from the Scripts folder
 Add the Newtonsoft.JSON package to your project or the newtonsoft.json.dll file to your project
 
+##What This Class Can Do:
+
+This script allows you to send an sms or a 2 way message using Clickatell's platform.
+
 ##Using The Class:
 
 You call the class by using 
@@ -52,6 +56,10 @@ The Json array will include an array of messages which each in turn contains:
 * an error message if applicable (see link below to error messages)
 
 ##Reference Links and More Info:
+
+Found a bug or missing a feature? Log it here and we will take a look at it
+https://github.com/ninjakitteh69/Clickatell-Csharp/issues
+
 Register a new account to send sms's:
 https://www.clickatell.com/sign-up/
 
