@@ -57,7 +57,7 @@ The Json array will include an array of messages which each in turn contains:
 
 ##Reference Links and More Info:
 
-Found a bug or missing a feature? Log it here and we will take a look at it
+Found a bug or missing a feature? Log it here and we will take a look.
 https://github.com/ninjakitteh69/Clickatell-Csharp/issues
 
 Register a new account to send sms's:
